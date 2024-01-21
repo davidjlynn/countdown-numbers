@@ -26,22 +26,16 @@ public class NumbersService {
     List<SumSo> validSums =
         sums.stream()
             .filter(sum -> sum.getTotal().equals(challenge.getTargetNumber()))
-            .collect(Collectors.toList());
+            .toList();
 
     return validSums.stream()
         .collect(Collectors.groupingBy(sum -> sum.getOperation().getOperationString()));
   }
 
   private List<SumSo> calculateListOfResults(List<Integer> numbers) {
-
-    Stream<OperationSo> additionStream = createOperations(numbers).stream();
-
-    Stream<OperationSo> joinedStream =
-        Stream.of(/*numberStream, */ additionStream).flatMap(Function.identity());
-
-    return joinedStream
+    return createOperations(numbers).stream()
         .map(SumSo::new)
-        .peek(sum -> setTotal(sum))
+        .peek(this::setTotal)
         .filter(sum -> !sum.getInvalidSum())
         .collect(Collectors.toList());
   }
