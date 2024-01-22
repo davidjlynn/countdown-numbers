@@ -1,4 +1,4 @@
-package com.davidjlynn.countdownnumbers.service.model;
+package com.davidjlynn.countdownnumbers.service.model.operation;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,7 +10,7 @@ public class NumberSo implements OperationSo {
   private Integer number;
 
   @Override
-  public String getOperationString(){
+  public String getOperationString() {
     return number.toString();
   }
 

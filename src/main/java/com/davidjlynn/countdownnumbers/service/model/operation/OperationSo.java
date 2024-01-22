@@ -1,4 +1,4 @@
-package com.davidjlynn.countdownnumbers.service.model;
+package com.davidjlynn.countdownnumbers.service.model.operation;
 
 public interface OperationSo {
 

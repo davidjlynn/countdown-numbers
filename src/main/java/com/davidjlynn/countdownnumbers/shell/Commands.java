@@ -23,28 +23,24 @@ public class Commands {
       @Option(arity = OptionArity.EXACTLY_ONE) Integer target,
       @Option(arityMin = 6, arityMax = 6) List<Integer> numbers) {
     ChallengeSo challenge = new ChallengeSo(target, numbers);
-    Map<String,List<SumSo>> sums = numbersService.findNumberCombination(challenge);
+    Map<String, List<SumSo>> sums = numbersService.findNumberCombination(challenge);
     StringBuilder stringBuilder = new StringBuilder();
-    if (sums.isEmpty()){
+    if (sums.isEmpty()) {
       stringBuilder.append("No matching results were found");
-    }else{
+    } else {
       stringBuilder
           .append(sums.size())
           .append(" matching results was found")
           .append(System.lineSeparator())
           .append(System.lineSeparator());
 
-      sums.keySet().forEach(
-          sum -> stringBuilder
-              .append(sum)
-              .append(System.lineSeparator()));
+      sums.keySet().forEach(sum -> stringBuilder.append(sum).append(System.lineSeparator()));
 
       stringBuilder
           .append(System.lineSeparator())
           .append(System.lineSeparator())
           .append(sums.size())
           .append(" matching results was found");
-
     }
 
     return stringBuilder.toString();

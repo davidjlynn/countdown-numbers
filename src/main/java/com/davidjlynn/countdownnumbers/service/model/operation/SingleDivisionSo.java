@@ -1,20 +1,20 @@
-package com.davidjlynn.countdownnumbers.service.model;
+package com.davidjlynn.countdownnumbers.service.model.operation;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class DivisionSo implements OperationSo{
+public class SingleDivisionSo implements SingleOperationSo {
 
   private final OperationSo number1;
   private final OperationSo number2;
 
-  public DivisionSo(Integer number1, OperationSo operation2){
+  public SingleDivisionSo(Integer number1, OperationSo operation2) {
     this(new NumberSo(number1), operation2);
   }
 
-  public DivisionSo(Integer number1, Integer number2){
+  public SingleDivisionSo(Integer number1, Integer number2) {
     this(new NumberSo(number1), new NumberSo(number2));
   }
 
@@ -25,7 +25,7 @@ public class DivisionSo implements OperationSo{
 
   @Override
   public Integer getTotal() {
-    if (number1.getTotal() % number2.getTotal() != 0){
+    if (number1.getTotal() % number2.getTotal() != 0) {
       throw new ArithmeticException("Decimals not tolerated.");
     }
     return number1.getTotal() / number2.getTotal();

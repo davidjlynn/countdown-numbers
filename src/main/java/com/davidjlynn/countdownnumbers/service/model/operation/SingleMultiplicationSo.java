@@ -1,20 +1,20 @@
-package com.davidjlynn.countdownnumbers.service.model;
+package com.davidjlynn.countdownnumbers.service.model.operation;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class MultiplicationSo implements OperationSo{
+public class SingleMultiplicationSo implements SingleOperationSo {
 
   private final OperationSo number1;
   private final OperationSo number2;
 
-  public MultiplicationSo(Integer number1, OperationSo operation2){
+  public SingleMultiplicationSo(Integer number1, OperationSo operation2) {
     this(new NumberSo(number1), operation2);
   }
 
-  public MultiplicationSo(Integer number1, Integer number2){
+  public SingleMultiplicationSo(Integer number1, Integer number2) {
     this(new NumberSo(number1), new NumberSo(number2));
   }
 

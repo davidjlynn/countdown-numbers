@@ -1,5 +1,6 @@
 package com.davidjlynn.countdownnumbers.service.model;
 
+import com.davidjlynn.countdownnumbers.service.model.operation.OperationSo;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
