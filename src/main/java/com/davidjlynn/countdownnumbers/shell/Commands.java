@@ -21,7 +21,7 @@ public class Commands {
   @Command(command = "calculate-numbers")
   public String calculateNumbers(
       @Option(arity = OptionArity.EXACTLY_ONE) Integer target,
-      @Option(arityMin = 6, arityMax = 6) List<Integer> numbers) {
+      @Option(arityMin = 1, arityMax = 6) List<Integer> numbers) {
     ChallengeSo challenge = new ChallengeSo(target, numbers);
     Map<String, List<SumSo>> sums = numbersService.findNumberCombination(challenge);
     StringBuilder stringBuilder = new StringBuilder();
