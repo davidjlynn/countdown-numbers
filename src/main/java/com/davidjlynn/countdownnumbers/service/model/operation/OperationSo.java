@@ -4,5 +4,5 @@ public interface OperationSo {
 
   String getOperationString();
 
-  Integer getTotal();
+  int getTotal();
 }
