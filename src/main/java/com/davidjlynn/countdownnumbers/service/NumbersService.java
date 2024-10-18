@@ -21,16 +21,19 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class NumbersService {
 
-    public Map<String, List<SumSo>> findNumberCombination(ChallengeSo challenge) {
-        List<SumSo> sums = calculateListOfResults(challenge.getAvailableNumbers());
+    public List<SumSo> findNumberCombination(ChallengeSo challenge) {
+        return findNumberCombination(challenge.getAvailableNumbers(), challenge.getTargetNumber());
+    }
+
+    public List<SumSo> findNumberCombination(List<Integer> numbers, Integer targetNumber) {
+        List<SumSo> sums = calculateListOfResults(numbers);
 
         List<SumSo> validSums =
                 sums.stream()
-                        .filter(sum -> sum.getTotal().equals(challenge.getTargetNumber()))
+                        .filter(sum -> sum.getTotal().equals(targetNumber))
                         .toList();
 
-        return validSums.stream()
-                .collect(Collectors.groupingBy(sum -> sum.getOperation().getOperationString()));
+        return validSums;
     }
 
     protected List<SumSo> calculateListOfResults(List<Integer> numbers) {

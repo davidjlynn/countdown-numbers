@@ -11,9 +11,22 @@ public class NumbersServiceTest {
     private final NumbersService numbersService = new NumbersService();
 
     @Test
-    public void calculateListOfResults_validOne() {
+    public void calculateListOfResults_0() {
         // given:
-        List<Integer> input = List.of(2);
+        List<Integer> input = List.of();
+
+        // when:
+        List<SumSo> result = numbersService.calculateListOfResults(input);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(0, result.size());
+    }
+
+    @Test
+    public void calculateListOfResults_1() {
+        // given:
+        List<Integer> input = List.of(1);
 
         // when:
         List<SumSo> result = numbersService.calculateListOfResults(input);
@@ -24,28 +37,111 @@ public class NumbersServiceTest {
     }
 
     @Test
-    public void calculateListOfResults_validTwo() {
+    public void calculateListOfResults_2() {
         // given:
-        List<Integer> input = List.of(2, 4);
+        List<Integer> input = List.of(1, 2);
 
         // when:
         List<SumSo> result = numbersService.calculateListOfResults(input);
 
         // then:
         Assertions.assertNotNull(result);
-        Assertions.assertEquals(7, result.size());
+        Assertions.assertEquals(9, result.size());
     }
 
     @Test
-    public void calculateListOfResults_validThree() {
+    public void calculateListOfResults_3() {
         // given:
-        List<Integer> input = List.of(2, 4, 6);
+        List<Integer> input = List.of(1, 2, 3);
 
         // when:
         List<SumSo> result = numbersService.calculateListOfResults(input);
 
         // then:
         Assertions.assertNotNull(result);
-        Assertions.assertEquals(90, result.size());
+        Assertions.assertEquals(163, result.size());
+    }
+
+    @Test
+    public void calculateListOfResults_4() {
+        // given:
+        List<Integer> input = List.of(1, 2, 3, 4);
+
+        // when:
+        List<SumSo> result = numbersService.calculateListOfResults(input);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(6039, result.size());
+    }
+
+    @Test
+    public void findNumberCombination_0() {
+        // given:
+        List<Integer> inputNumbers = List.of();
+        Integer inputTargetNumber = 1;
+
+        // when:
+        List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(0, result.size());
+    }
+
+    @Test
+    public void findNumberCombination_1() {
+        // given:
+        List<Integer> inputNumbers = List.of(1);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(1, result.size());
+    }
+
+    @Test
+    public void findNumberCombination_2() {
+        // given:
+        List<Integer> inputNumbers = List.of(1, 2);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(2, result.size());
+    }
+
+    @Test
+    public void findNumberCombination_3() {
+        // given:
+        List<Integer> inputNumbers = List.of(1, 2, 3);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(19, result.size());
+    }
+
+    @Test
+    public void findNumberCombination_4() {
+        // given:
+        List<Integer> inputNumbers = List.of(1, 2, 3, 4);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(365, result.size());
     }
 }
