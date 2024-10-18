@@ -76,6 +76,32 @@ public class NumberListGeneratorServiceTest {
     }
 
     @Test
+    public void calculateListOfResults_5() {
+        // given:
+        List<Integer> input = List.of(1, 2, 3, 4, 5);
+
+        // when:
+        List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(120, result.size());
+    }
+
+    @Test
+    public void calculateListOfResults_6() {
+        // given:
+        List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
+
+        // when:
+        List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(720, result.size());
+    }
+
+    @Test
     public void cutDown_0() {
         // given:
         List<Integer> input = List.of();
@@ -141,6 +167,32 @@ public class NumberListGeneratorServiceTest {
     }
 
     @Test
+    public void cutDown_5() {
+        // given:
+        List<Integer> input = List.of(1, 2, 3, 4, 5);
+
+        // when:
+        List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(4, result.size());
+    }
+
+    @Test
+    public void cutDown_6() {
+        // given:
+        List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
+
+        // when:
+        List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(5, result.size());
+    }
+
+    @Test
     public void generateNumberListIncludingSubsets_0() {
         // given:
         List<Integer> input = List.of();
@@ -203,5 +255,31 @@ public class NumberListGeneratorServiceTest {
         // then:
         Assertions.assertNotNull(result);
         Assertions.assertEquals(64, result.size());
+    }
+
+    @Test
+    public void generateNumberListIncludingSubsets_5() {
+        // given:
+        List<Integer> input = List.of(1, 2, 3, 4, 5);
+
+        // when:
+        Set<List<Integer>> result = numberListGeneratorService.generateNumberListIncludingSubsets(input);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(325, result.size());
+    }
+
+    @Test
+    public void generateNumberListIncludingSubsets_6() {
+        // given:
+        List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
+
+        // when:
+        Set<List<Integer>> result = numberListGeneratorService.generateNumberListIncludingSubsets(input);
+
+        // then:
+        Assertions.assertNotNull(result);
+        Assertions.assertEquals(1956, result.size());
     }
 }

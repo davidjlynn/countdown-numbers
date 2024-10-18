@@ -28,12 +28,9 @@ public class NumbersService {
     public List<SumSo> findNumberCombination(List<Integer> numbers, Integer targetNumber) {
         List<SumSo> sums = calculateListOfResults(numbers);
 
-        List<SumSo> validSums =
-                sums.stream()
-                        .filter(sum -> sum.getTotal().equals(targetNumber))
-                        .toList();
-
-        return validSums;
+        return sums.stream()
+                .filter(sum -> sum.getTotal().equals(targetNumber))
+                .toList();
     }
 
     protected List<SumSo> calculateListOfResults(List<Integer> numbers) {
@@ -43,7 +40,6 @@ public class NumbersService {
                 .map(SumSo::new)
                 .peek(this::setTotal)
                 .filter(sum -> !sum.getInvalidSum())
-                .peek(sum -> log.info(sum.getOperation().getOperationString()))
                 .collect(Collectors.toList());
     }
 
