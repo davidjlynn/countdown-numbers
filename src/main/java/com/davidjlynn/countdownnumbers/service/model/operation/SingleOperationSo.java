@@ -2,7 +2,18 @@ package com.davidjlynn.countdownnumbers.service.model.operation;
 
 public interface SingleOperationSo extends OperationSo {
 
-  OperationSo getNumber1();
+  OperationSo getSubOperation1();
 
-  OperationSo getNumber2();
+  OperationSo getSubOperation2();
+
+  String getOperationSymbol();
+
+  @Override
+  default String getOperationString() {
+    return String.format(
+            "( %s %s %s )",
+            getSubOperation1().getOperationString(),
+            getOperationSymbol(),
+            getSubOperation2().getOperationString());
+  }
 }

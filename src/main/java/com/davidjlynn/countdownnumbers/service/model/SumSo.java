@@ -16,4 +16,12 @@ public class SumSo {
 
   // Divide by zero for example.
   private Boolean invalidSum = false;
+
+  public void calculateTotal(){
+    try {
+      setTotal(getOperation().getTotal());
+    } catch (ArithmeticException e) {
+      setInvalidSum(true);
+    }
+  }
 }

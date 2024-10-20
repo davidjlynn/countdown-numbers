@@ -7,16 +7,16 @@ import lombok.Getter;
 @AllArgsConstructor
 public class SingleAdditionSo implements SingleOperationSo {
 
-  private final OperationSo number1;
-  private final OperationSo number2;
+  private final OperationSo subOperation1;
+  private final OperationSo subOperation2;
 
   @Override
-  public String getOperationString() {
-    return String.format("( %s + %s )", number1.getOperationString(), number2.getOperationString());
+  public String getOperationSymbol() {
+    return "+";
   }
 
   @Override
   public int getTotal() {
-    return number1.getTotal() + number2.getTotal();
+    return subOperation1.getTotal() + subOperation2.getTotal();
   }
 }

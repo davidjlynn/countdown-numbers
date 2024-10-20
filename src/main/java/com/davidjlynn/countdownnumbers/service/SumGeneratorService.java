@@ -12,6 +12,18 @@ import java.util.stream.IntStream;
 @Service
 public class SumGeneratorService {
 
+    public static SumSo summifyFirst(Set<List<Integer>> input, Integer targetNumber) {
+        return input.stream()
+                .map(SumGeneratorService::summifySingle)
+                .flatMap(Collection::stream)
+                .map(SumSo::new)
+                .peek(SumSo::calculateTotal)
+                .filter(sum -> !sum.getInvalidSum())
+                .filter(sum -> sum.getTotal().equals(targetNumber))
+                .findFirst()
+                .orElse(null);
+    }
+
     public static Set<OperationSo> summifySet(Set<List<Integer>> input) {
         return input.stream()
                 .map(SumGeneratorService::summifySingle)
@@ -62,8 +74,7 @@ public class SumGeneratorService {
         copy.remove(joinPair - 1);
         copy.add(joinPair - 1, resultOp);
 
-        Set<OperationSo> subOperations = summifyOperation(copy);
-        return subOperations;
+        return summifyOperation(copy);
     }
 
 }
