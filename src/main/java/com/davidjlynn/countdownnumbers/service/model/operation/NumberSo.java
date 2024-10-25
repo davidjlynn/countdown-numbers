@@ -7,15 +7,15 @@ import lombok.Getter;
 @Getter
 public class NumberSo implements OperationSo {
 
-  private int number;
+    private int number;
 
-  @Override
-  public String getOperationString() {
-    return String.valueOf(number);
-  }
+    @Override
+    public String getOperationString() {
+        return String.valueOf(number);
+    }
 
-  @Override
-  public int getTotal() {
-    return number;
-  }
+    @Override
+    public int getTotal() {
+        return number;
+    }
 }

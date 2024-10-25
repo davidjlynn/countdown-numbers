@@ -11,7 +11,7 @@ import org.springframework.shell.command.annotation.EnableCommand;
 @EnableCommand(Commands.class)
 public class CountdownNumbersApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(CountdownNumbersApplication.class, args);
-  }
+    public static void main(String[] args) {
+        SpringApplication.run(CountdownNumbersApplication.class, args);
+    }
 }

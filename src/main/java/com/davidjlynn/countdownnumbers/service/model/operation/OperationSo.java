@@ -2,7 +2,7 @@ package com.davidjlynn.countdownnumbers.service.model.operation;
 
 public interface OperationSo {
 
-  String getOperationString();
+    String getOperationString();
 
-  int getTotal();
+    int getTotal();
 }

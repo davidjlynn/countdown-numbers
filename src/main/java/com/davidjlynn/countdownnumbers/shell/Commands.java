@@ -51,7 +51,7 @@ public class Commands {
             @Option(arityMin = 1, arityMax = 6) List<Integer> numbers) {
         SumSo sum = numbersService.calculateFirstResult(numbers, target);
         StringBuilder stringBuilder = new StringBuilder();
-        if (sum== null) {
+        if (sum == null) {
             stringBuilder.append("No matching results were found");
         } else {
             stringBuilder
