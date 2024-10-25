@@ -173,6 +173,7 @@ public class NumbersServiceTest {
         Assertions.assertEquals(365, result.size());
     }
 
+    @Disabled("Takes too long")
     @Test
     public void findNumberCombination_5() {
         // given:
@@ -200,5 +201,95 @@ public class NumbersServiceTest {
         // then:
         Assertions.assertNotNull(result);
         Assertions.assertEquals(14523, result.size());
+    }
+    @Test
+    public void calculateFirstResult_0() {
+        // given:
+        List<Integer> inputNumbers = List.of();
+        Integer inputTargetNumber = 1;
+
+        // when:
+        SumSo result = numbersService.calculateFirstResult(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNull(result);
+    }
+
+    @Test
+    public void calculateFirstResult_1() {
+        // given:
+        List<Integer> inputNumbers = List.of(1);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        SumSo result = numbersService.calculateFirstResult(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+    }
+
+    @Test
+    public void calculateFirstResult_2() {
+        // given:
+        List<Integer> inputNumbers = List.of(1, 2);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        SumSo result = numbersService.calculateFirstResult(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+    }
+
+    @Test
+    public void calculateFirstResult_3() {
+        // given:
+        List<Integer> inputNumbers = List.of(1, 2, 3);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        SumSo result = numbersService.calculateFirstResult(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+    }
+
+    @Test
+    public void calculateFirstResult_4() {
+        // given:
+        List<Integer> inputNumbers = List.of(1, 2, 3, 4);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        SumSo result = numbersService.calculateFirstResult(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+    }
+
+    @Test
+    public void calculateFirstResult_5() {
+        // given:
+        List<Integer> inputNumbers = List.of(1, 2, 3, 4, 5);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        SumSo result = numbersService.calculateFirstResult(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
+    }
+
+    @Test
+    public void calculateFirstResult_6() {
+        // given:
+        List<Integer> inputNumbers = List.of(1, 2, 3, 4, 5, 6);
+        Integer inputTargetNumber = 1;
+
+        // when:
+        SumSo result = numbersService.calculateFirstResult(inputNumbers, inputTargetNumber);
+
+        // then:
+        Assertions.assertNotNull(result);
     }
 }

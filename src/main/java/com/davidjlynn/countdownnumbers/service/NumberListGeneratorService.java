@@ -40,10 +40,14 @@ public class NumberListGeneratorService {
                 .flatMap(Collection::stream)
                 .toList();
 
-        Set<List<Integer>> result = new HashSet<>();
-        result.addAll(numberList);
+        SequencedSet<List<Integer>> result = new LinkedHashSet<>();
         result.addAll(numberListDeepCopy);
-        return result;
+        result.addAll(numberList);
+
+        // Order the set for hopefully simpler results.
+        return result.stream()
+                .sorted(Comparator.comparing(List::size))
+                .collect(Collectors.toCollection(LinkedHashSet::new));
     }
 
     public static List<List<Integer>> cutDown(List<Integer> list) {
