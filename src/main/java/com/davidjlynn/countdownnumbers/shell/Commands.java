@@ -31,7 +31,11 @@ public class Commands {
           .append(System.lineSeparator())
           .append(System.lineSeparator());
 
-      sums.forEach(sum -> stringBuilder.append(sum).append(System.lineSeparator()));
+      sums.forEach(
+          sum ->
+              stringBuilder
+                  .append(sum.getOperation().getOperationString())
+                  .append(System.lineSeparator()));
 
       stringBuilder
           .append(System.lineSeparator())
