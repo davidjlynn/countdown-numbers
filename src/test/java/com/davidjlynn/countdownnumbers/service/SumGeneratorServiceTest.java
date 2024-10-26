@@ -6,7 +6,7 @@ import java.util.Set;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class SumGeneratorServiceTest {
+class SumGeneratorServiceTest {
 
   @Test
   void calculateListOfResults_0() {

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-public class NumbersServiceTest {
+class NumbersServiceTest {
 
   private final NumbersService numbersService = new NumbersService();
 

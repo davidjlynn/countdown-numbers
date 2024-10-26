@@ -5,7 +5,7 @@ import java.util.Set;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class NumberListGeneratorServiceTest {
+class NumberListGeneratorServiceTest {
 
   @Test
   void calculateListOfResults_0() {
