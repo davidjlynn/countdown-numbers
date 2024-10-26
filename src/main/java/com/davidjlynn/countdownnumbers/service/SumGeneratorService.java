@@ -3,12 +3,13 @@ package com.davidjlynn.countdownnumbers.service;
 import com.davidjlynn.countdownnumbers.service.model.SumSo;
 import com.davidjlynn.countdownnumbers.service.model.operation.*;
 import java.util.*;
-import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import org.springframework.stereotype.Service;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
-@Service
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class SumGeneratorService {
 
   public static SumSo summifyFirst(Set<List<Integer>> input, Integer targetNumber) {
@@ -60,9 +61,7 @@ public class SumGeneratorService {
   }
 
   public static Set<OperationSo> applyPair(
-      List<OperationSo> input,
-      Integer joinPair,
-      BiFunction<OperationSo, OperationSo, OperationSo> creator) {
+      List<OperationSo> input, Integer joinPair, BinaryOperator<OperationSo> creator) {
     if (!(joinPair < input.size() && joinPair > 0)) {
       throw new IllegalArgumentException();
     }
