@@ -7,5 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class CountdownNumbersApplicationTests {
 
   @Test
-  void contextLoads() {}
+  void contextLoads() {
+    // Spin up the context to test successful application start.
+  }
 }

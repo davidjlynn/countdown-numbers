@@ -7,16 +7,13 @@ import org.junit.jupiter.api.Test;
 
 public class NumberListGeneratorServiceTest {
 
-  private final NumberListGeneratorService numberListGeneratorService =
-      new NumberListGeneratorService();
-
   @Test
   public void calculateListOfResults_0() {
     // given:
     List<Integer> input = List.of();
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+    List<List<Integer>> result = NumberListGeneratorService.generateNumberListAllIntegers(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -29,7 +26,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+    List<List<Integer>> result = NumberListGeneratorService.generateNumberListAllIntegers(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -42,7 +39,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+    List<List<Integer>> result = NumberListGeneratorService.generateNumberListAllIntegers(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -55,7 +52,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+    List<List<Integer>> result = NumberListGeneratorService.generateNumberListAllIntegers(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -68,7 +65,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+    List<List<Integer>> result = NumberListGeneratorService.generateNumberListAllIntegers(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -81,7 +78,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+    List<List<Integer>> result = NumberListGeneratorService.generateNumberListAllIntegers(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -94,7 +91,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.generateNumberListAllIntegers(input);
+    List<List<Integer>> result = NumberListGeneratorService.generateNumberListAllIntegers(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -107,7 +104,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of();
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+    List<List<Integer>> result = NumberListGeneratorService.cutDown(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -120,7 +117,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+    List<List<Integer>> result = NumberListGeneratorService.cutDown(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -133,7 +130,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+    List<List<Integer>> result = NumberListGeneratorService.cutDown(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -146,7 +143,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+    List<List<Integer>> result = NumberListGeneratorService.cutDown(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -159,7 +156,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+    List<List<Integer>> result = NumberListGeneratorService.cutDown(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -172,7 +169,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+    List<List<Integer>> result = NumberListGeneratorService.cutDown(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -185,7 +182,7 @@ public class NumberListGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
     // when:
-    List<List<Integer>> result = numberListGeneratorService.cutDown(input);
+    List<List<Integer>> result = NumberListGeneratorService.cutDown(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -199,7 +196,7 @@ public class NumberListGeneratorServiceTest {
 
     // when:
     Set<List<Integer>> result =
-        numberListGeneratorService.generateNumberListIncludingSubsets(input);
+        NumberListGeneratorService.generateNumberListIncludingSubsets(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -213,7 +210,7 @@ public class NumberListGeneratorServiceTest {
 
     // when:
     Set<List<Integer>> result =
-        numberListGeneratorService.generateNumberListIncludingSubsets(input);
+        NumberListGeneratorService.generateNumberListIncludingSubsets(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -227,7 +224,7 @@ public class NumberListGeneratorServiceTest {
 
     // when:
     Set<List<Integer>> result =
-        numberListGeneratorService.generateNumberListIncludingSubsets(input);
+        NumberListGeneratorService.generateNumberListIncludingSubsets(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -241,7 +238,7 @@ public class NumberListGeneratorServiceTest {
 
     // when:
     Set<List<Integer>> result =
-        numberListGeneratorService.generateNumberListIncludingSubsets(input);
+        NumberListGeneratorService.generateNumberListIncludingSubsets(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -255,7 +252,7 @@ public class NumberListGeneratorServiceTest {
 
     // when:
     Set<List<Integer>> result =
-        numberListGeneratorService.generateNumberListIncludingSubsets(input);
+        NumberListGeneratorService.generateNumberListIncludingSubsets(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -269,7 +266,7 @@ public class NumberListGeneratorServiceTest {
 
     // when:
     Set<List<Integer>> result =
-        numberListGeneratorService.generateNumberListIncludingSubsets(input);
+        NumberListGeneratorService.generateNumberListIncludingSubsets(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -283,7 +280,7 @@ public class NumberListGeneratorServiceTest {
 
     // when:
     Set<List<Integer>> result =
-        numberListGeneratorService.generateNumberListIncludingSubsets(input);
+        NumberListGeneratorService.generateNumberListIncludingSubsets(input);
 
     // then:
     Assertions.assertNotNull(result);

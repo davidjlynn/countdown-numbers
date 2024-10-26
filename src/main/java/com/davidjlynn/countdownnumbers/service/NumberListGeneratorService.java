@@ -4,9 +4,10 @@ import jakarta.validation.constraints.NotNull;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import org.springframework.stereotype.Service;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
-@Service
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class NumberListGeneratorService {
 
   public static List<List<Integer>> generateNumberListAllIntegers(
@@ -56,6 +57,6 @@ public class NumberListGeneratorService {
     }
     return IntStream.rangeClosed(1, list.size() - 1)
         .mapToObj(digits -> list.subList(0, digits))
-        .collect(Collectors.toList());
+        .toList();
   }
 }
