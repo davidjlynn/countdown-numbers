@@ -96,8 +96,8 @@ tasks.release.dependsOn tasks.publish
 
 publishing {
   publications {
-    publication(MavenPublication) {
-      from(components.java)
+    mavenJava(MavenPublication) {
+      artifact jar
     }
   }
   repositories {
