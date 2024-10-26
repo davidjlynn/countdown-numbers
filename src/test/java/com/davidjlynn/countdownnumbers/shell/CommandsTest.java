@@ -28,8 +28,7 @@ class CommandsTest {
             new SumSo(new SingleAdditionSo(new NumberSo(2), new NumberSo(2))),
             new SumSo(new SingleMultiplicationSo(new NumberSo(2), new NumberSo(2))),
             new SumSo(new SingleDivisionSo(new NumberSo(2), new NumberSo(2))));
-    Mockito.when(numbersService.findNumberCombination(Mockito.eq(numbers), Mockito.eq(target)))
-        .thenReturn(mockResult);
+    Mockito.when(numbersService.findNumberCombination(numbers, target)).thenReturn(mockResult);
 
     // when:
     String result = commands.calculateNumbers(target, numbers);
@@ -46,8 +45,7 @@ class CommandsTest {
 
     // and:
     List<SumSo> mockResult = List.of();
-    Mockito.when(numbersService.findNumberCombination(Mockito.eq(numbers), Mockito.eq(target)))
-        .thenReturn(mockResult);
+    Mockito.when(numbersService.findNumberCombination(numbers, target)).thenReturn(mockResult);
 
     // when:
     String result = commands.calculateNumbers(target, numbers);
@@ -64,8 +62,7 @@ class CommandsTest {
 
     // and:
     SumSo mockResult = new SumSo(new NumberSo(2));
-    Mockito.when(numbersService.calculateFirstResult(Mockito.eq(numbers), Mockito.eq(target)))
-        .thenReturn(mockResult);
+    Mockito.when(numbersService.calculateFirstResult(numbers, target)).thenReturn(mockResult);
 
     // when:
     String result = commands.calculateFirstNumbers(target, numbers);
@@ -81,8 +78,7 @@ class CommandsTest {
     List<Integer> numbers = List.of();
 
     // and:
-    Mockito.when(numbersService.calculateFirstResult(Mockito.eq(numbers), Mockito.eq(target)))
-        .thenReturn(null);
+    Mockito.when(numbersService.calculateFirstResult(numbers, target)).thenReturn(null);
 
     // when:
     String result = commands.calculateFirstNumbers(target, numbers);
