@@ -3,6 +3,7 @@ plugins {
   alias(libs.plugins.springBoot)
   alias(libs.plugins.springDependencyManagement)
   id 'jacoco'
+  alias(libs.plugins.sonarqube)
   alias(libs.plugins.spotless)
 }
 
@@ -59,6 +60,14 @@ jacocoTestReport {
 jacocoTestReport {
   reports {
     xml.required = true
+  }
+}
+
+sonar {
+  properties {
+    property "sonar.organization", "davidjlynn"
+    property "sonar.projectKey", "davidjlynn_countdown-numbers"
+    property "sonar.token", System.getenv("SONAR_TOKEN")
   }
 }
 
