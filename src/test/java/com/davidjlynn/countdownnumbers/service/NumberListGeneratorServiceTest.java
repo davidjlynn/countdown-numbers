@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 public class NumberListGeneratorServiceTest {
 
   @Test
-  public void calculateListOfResults_0() {
+  void calculateListOfResults_0() {
     // given:
     List<Integer> input = List.of();
 
@@ -21,7 +21,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_1() {
+  void calculateListOfResults_1() {
     // given:
     List<Integer> input = List.of(1);
 
@@ -34,7 +34,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_2() {
+  void calculateListOfResults_2() {
     // given:
     List<Integer> input = List.of(1, 2);
 
@@ -47,7 +47,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_3() {
+  void calculateListOfResults_3() {
     // given:
     List<Integer> input = List.of(1, 2, 3);
 
@@ -60,7 +60,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_4() {
+  void calculateListOfResults_4() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4);
 
@@ -73,7 +73,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_5() {
+  void calculateListOfResults_5() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
@@ -86,7 +86,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_6() {
+  void calculateListOfResults_6() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
@@ -99,7 +99,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void cutDown_0() {
+  void cutDown_0() {
     // given:
     List<Integer> input = List.of();
 
@@ -112,7 +112,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void cutDown_1() {
+  void cutDown_1() {
     // given:
     List<Integer> input = List.of(1);
 
@@ -125,7 +125,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void cutDown_2() {
+  void cutDown_2() {
     // given:
     List<Integer> input = List.of(1, 2);
 
@@ -138,7 +138,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void cutDown_3() {
+  void cutDown_3() {
     // given:
     List<Integer> input = List.of(1, 2, 3);
 
@@ -151,7 +151,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void cutDown_4() {
+  void cutDown_4() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4);
 
@@ -164,7 +164,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void cutDown_5() {
+  void cutDown_5() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
@@ -177,7 +177,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void cutDown_6() {
+  void cutDown_6() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
@@ -190,7 +190,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void generateNumberListIncludingSubsets_0() {
+  void generateNumberListIncludingSubsets_0() {
     // given:
     List<Integer> input = List.of();
 
@@ -204,7 +204,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void generateNumberListIncludingSubsets_1() {
+  void generateNumberListIncludingSubsets_1() {
     // given:
     List<Integer> input = List.of(1);
 
@@ -218,7 +218,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void generateNumberListIncludingSubsets_2() {
+  void generateNumberListIncludingSubsets_2() {
     // given:
     List<Integer> input = List.of(1, 2);
 
@@ -232,7 +232,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void generateNumberListIncludingSubsets_3() {
+  void generateNumberListIncludingSubsets_3() {
     // given:
     List<Integer> input = List.of(1, 2, 3);
 
@@ -246,7 +246,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void generateNumberListIncludingSubsets_4() {
+  void generateNumberListIncludingSubsets_4() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4);
 
@@ -260,7 +260,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void generateNumberListIncludingSubsets_5() {
+  void generateNumberListIncludingSubsets_5() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
@@ -274,7 +274,7 @@ public class NumberListGeneratorServiceTest {
   }
 
   @Test
-  public void generateNumberListIncludingSubsets_6() {
+  void generateNumberListIncludingSubsets_6() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 

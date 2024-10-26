@@ -11,7 +11,7 @@ public class NumbersServiceTest {
   private final NumbersService numbersService = new NumbersService();
 
   @Test
-  public void calculateListOfResults_0() {
+  void calculateListOfResults_0() {
     // given:
     List<Integer> input = List.of();
 
@@ -24,7 +24,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_1() {
+  void calculateListOfResults_1() {
     // given:
     List<Integer> input = List.of(1);
 
@@ -37,7 +37,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_2() {
+  void calculateListOfResults_2() {
     // given:
     List<Integer> input = List.of(1, 2);
 
@@ -50,7 +50,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_3() {
+  void calculateListOfResults_3() {
     // given:
     List<Integer> input = List.of(1, 2, 3);
 
@@ -63,7 +63,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_4() {
+  void calculateListOfResults_4() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4);
 
@@ -76,7 +76,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_5() {
+  void calculateListOfResults_5() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
@@ -90,7 +90,7 @@ public class NumbersServiceTest {
 
   @Disabled("Too much memory")
   @Test
-  public void calculateListOfResults_6() {
+  void calculateListOfResults_6() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
@@ -103,7 +103,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void findNumberCombination_0() {
+  void findNumberCombination_0() {
     // given:
     List<Integer> inputNumbers = List.of();
     Integer inputTargetNumber = 1;
@@ -117,7 +117,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void findNumberCombination_1() {
+  void findNumberCombination_1() {
     // given:
     List<Integer> inputNumbers = List.of(1);
     Integer inputTargetNumber = 1;
@@ -131,7 +131,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void findNumberCombination_2() {
+  void findNumberCombination_2() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2);
     Integer inputTargetNumber = 1;
@@ -145,7 +145,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void findNumberCombination_3() {
+  void findNumberCombination_3() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2, 3);
     Integer inputTargetNumber = 1;
@@ -159,7 +159,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void findNumberCombination_4() {
+  void findNumberCombination_4() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2, 3, 4);
     Integer inputTargetNumber = 1;
@@ -174,7 +174,7 @@ public class NumbersServiceTest {
 
   @Disabled("Takes too long")
   @Test
-  public void findNumberCombination_5() {
+  void findNumberCombination_5() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2, 3, 4, 5);
     Integer inputTargetNumber = 1;
@@ -189,7 +189,7 @@ public class NumbersServiceTest {
 
   @Disabled("Too much memory")
   @Test
-  public void findNumberCombination_6() {
+  void findNumberCombination_6() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2, 3, 4, 5, 6);
     Integer inputTargetNumber = 1;
@@ -203,7 +203,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateFirstResult_0() {
+  void calculateFirstResult_0() {
     // given:
     List<Integer> inputNumbers = List.of();
     Integer inputTargetNumber = 1;
@@ -216,7 +216,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateFirstResult_1() {
+  void calculateFirstResult_1() {
     // given:
     List<Integer> inputNumbers = List.of(1);
     Integer inputTargetNumber = 1;
@@ -229,7 +229,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateFirstResult_2() {
+  void calculateFirstResult_2() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2);
     Integer inputTargetNumber = 1;
@@ -242,7 +242,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateFirstResult_3() {
+  void calculateFirstResult_3() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2, 3);
     Integer inputTargetNumber = 1;
@@ -255,7 +255,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateFirstResult_4() {
+  void calculateFirstResult_4() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2, 3, 4);
     Integer inputTargetNumber = 1;
@@ -268,7 +268,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateFirstResult_5() {
+  void calculateFirstResult_5() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2, 3, 4, 5);
     Integer inputTargetNumber = 1;
@@ -281,7 +281,7 @@ public class NumbersServiceTest {
   }
 
   @Test
-  public void calculateFirstResult_6() {
+  void calculateFirstResult_6() {
     // given:
     List<Integer> inputNumbers = List.of(1, 2, 3, 4, 5, 6);
     Integer inputTargetNumber = 1;
