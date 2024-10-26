@@ -48,6 +48,20 @@ tasks.named('test') {
   useJUnitPlatform()
 }
 
+test {
+  finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+  dependsOn test
+}
+
+jacocoTestReport {
+  reports {
+    xml.required = true
+  }
+}
+
 spotless {
   format 'misc', {
     target '.gitattributes', '.gitignore'
