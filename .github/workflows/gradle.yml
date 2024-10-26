@@ -26,7 +26,7 @@ jobs:
       uses: gradle/actions/setup-gradle@d156388eb19639ec20ade50009f3d199ce1e2808 # v4.1.0
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew build #sonar
+      run: ./gradlew build #sonar test
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
