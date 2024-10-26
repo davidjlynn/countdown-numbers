@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class SumGeneratorServiceTest {
 
   @Test
-  public void calculateListOfResults_0() {
+  void calculateListOfResults_0() {
     // given:
     List<Integer> input = List.of();
 
@@ -22,7 +22,7 @@ public class SumGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_1() {
+  void calculateListOfResults_1() {
     // given:
     List<Integer> input = List.of(1);
 
@@ -35,7 +35,7 @@ public class SumGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_2() {
+  void calculateListOfResults_2() {
     // given:
     List<Integer> input = List.of(1, 2);
 
@@ -48,7 +48,7 @@ public class SumGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_3() {
+  void calculateListOfResults_3() {
     // given:
     List<Integer> input = List.of(1, 2, 3);
 
@@ -61,7 +61,7 @@ public class SumGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_4() {
+  void calculateListOfResults_4() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4);
 
@@ -74,7 +74,7 @@ public class SumGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_5() {
+  void calculateListOfResults_5() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
@@ -87,7 +87,7 @@ public class SumGeneratorServiceTest {
   }
 
   @Test
-  public void calculateListOfResults_6() {
+  void calculateListOfResults_6() {
     // given:
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
