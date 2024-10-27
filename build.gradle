@@ -97,7 +97,7 @@ tasks.release.dependsOn tasks.publish
 publishing {
   publications {
     mavenJava(MavenPublication) {
-      artifact jar
+      artifact bootJar
     }
   }
   repositories {
