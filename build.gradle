@@ -90,8 +90,6 @@ spotless {
   }
 }
 
-nebulaRelease {
-}
 tasks.release.dependsOn tasks.publish
 
 publishing {
