@@ -12,25 +12,27 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class NumbersService {
 
-  public List<SumSo> findNumberCombination(List<Integer> numbers, Integer targetNumber) {
-    List<SumSo> sums = calculateListOfResults(numbers);
+  public SequencedSet<SumSo> findNumberCombination(List<Integer> numbers, Integer targetNumber) {
+    SequencedSet<SumSo> sums = calculateListOfResults(numbers);
 
-    return sums.stream().filter(sum -> sum.getTotal().equals(targetNumber)).toList();
+    return sums.stream()
+        .filter(sum -> sum.getTotal().equals(targetNumber))
+        .collect(Collectors.toCollection(LinkedHashSet::new));
   }
 
-  protected List<SumSo> calculateListOfResults(List<Integer> numbers) {
-    Set<List<Integer>> numberCombinations =
+  protected SequencedSet<SumSo> calculateListOfResults(List<Integer> numbers) {
+    SequencedSet<List<Integer>> numberCombinations =
         NumberListGeneratorService.generateNumberListIncludingSubsets(numbers);
-    Set<OperationSo> operationSos = SumGeneratorService.summifySet(numberCombinations);
+    SequencedSet<OperationSo> operationSos = SumGeneratorService.summifySet(numberCombinations);
     return operationSos.stream()
         .map(SumSo::new)
         .peek(SumSo::calculateTotal)
         .filter(sum -> !sum.getInvalidSum())
-        .collect(Collectors.toList());
+        .collect(Collectors.toCollection(LinkedHashSet::new));
   }
 
   public @Nullable SumSo calculateFirstResult(List<Integer> numbers, Integer targetNumber) {
-    Set<List<Integer>> numberCombinations =
+    SequencedSet<List<Integer>> numberCombinations =
         NumberListGeneratorService.generateNumberListIncludingSubsets(numbers);
     return SumGeneratorService.summifyFirst(numberCombinations, targetNumber);
   }
