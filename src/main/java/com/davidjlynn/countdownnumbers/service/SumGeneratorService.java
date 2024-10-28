@@ -24,19 +24,19 @@ public class SumGeneratorService {
         .orElse(null);
   }
 
-  public static Set<OperationSo> summifySet(Set<List<Integer>> input) {
+  public static SequencedSet<OperationSo> summifySet(SequencedSet<List<Integer>> input) {
     return input.stream()
         .map(SumGeneratorService::summifySingle)
         .flatMap(Collection::stream)
-        .collect(Collectors.toSet());
+        .collect(Collectors.toCollection(LinkedHashSet::new));
   }
 
-  public static Set<OperationSo> summifySingle(List<Integer> input) {
+  public static SequencedSet<OperationSo> summifySingle(List<Integer> input) {
     return summifyOperation(input.stream().map(NumberSo::new).collect(Collectors.toList()));
   }
 
-  public static Set<OperationSo> summifyOperation(List<OperationSo> input) {
-    Set<OperationSo> results = new HashSet<>();
+  public static SequencedSet<OperationSo> summifyOperation(List<OperationSo> input) {
+    SequencedSet<OperationSo> results = new LinkedHashSet<>();
     if (input.size() == 1) {
       results.add(input.getFirst());
     } else if (input.size() == 2) {
@@ -51,8 +51,8 @@ public class SumGeneratorService {
     return results;
   }
 
-  public static Set<OperationSo> applyPair(List<OperationSo> input, Integer joinPair) {
-    Set<OperationSo> result = new HashSet<>();
+  public static SequencedSet<OperationSo> applyPair(List<OperationSo> input, Integer joinPair) {
+    SequencedSet<OperationSo> result = new LinkedHashSet<>();
     result.addAll(applyPair(input, joinPair, SingleAdditionSo::new));
     result.addAll(applyPair(input, joinPair, SingleSubtractionSo::new));
     result.addAll(applyPair(input, joinPair, SingleMultiplicationSo::new));
@@ -60,7 +60,7 @@ public class SumGeneratorService {
     return result;
   }
 
-  public static Set<OperationSo> applyPair(
+  public static SequencedSet<OperationSo> applyPair(
       List<OperationSo> input, Integer joinPair, BinaryOperator<OperationSo> creator) {
     if (!(joinPair < input.size() && joinPair > 0)) {
       throw new IllegalArgumentException();

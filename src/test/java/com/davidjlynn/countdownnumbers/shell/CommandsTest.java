@@ -3,7 +3,9 @@ package com.davidjlynn.countdownnumbers.shell;
 import com.davidjlynn.countdownnumbers.service.NumbersService;
 import com.davidjlynn.countdownnumbers.service.model.SumSo;
 import com.davidjlynn.countdownnumbers.service.model.operation.*;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.SequencedSet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -21,13 +23,12 @@ class CommandsTest {
     List<Integer> numbers = List.of();
 
     // and:
-    List<SumSo> mockResult =
-        List.of(
-            new SumSo(new NumberSo(2)),
-            new SumSo(new SingleSubtractionSo(new NumberSo(2), new NumberSo(2))),
-            new SumSo(new SingleAdditionSo(new NumberSo(2), new NumberSo(2))),
-            new SumSo(new SingleMultiplicationSo(new NumberSo(2), new NumberSo(2))),
-            new SumSo(new SingleDivisionSo(new NumberSo(2), new NumberSo(2))));
+    SequencedSet<SumSo> mockResult = new LinkedHashSet<>();
+    mockResult.add(new SumSo(new NumberSo(2)));
+    mockResult.add(new SumSo(new SingleSubtractionSo(new NumberSo(2), new NumberSo(2))));
+    mockResult.add(new SumSo(new SingleAdditionSo(new NumberSo(2), new NumberSo(2))));
+    mockResult.add(new SumSo(new SingleMultiplicationSo(new NumberSo(2), new NumberSo(2))));
+    mockResult.add(new SumSo(new SingleDivisionSo(new NumberSo(2), new NumberSo(2))));
     Mockito.when(numbersService.findNumberCombination(numbers, target)).thenReturn(mockResult);
 
     // when:
@@ -44,7 +45,7 @@ class CommandsTest {
     List<Integer> numbers = List.of();
 
     // and:
-    List<SumSo> mockResult = List.of();
+    SequencedSet<SumSo> mockResult = new LinkedHashSet<>();
     Mockito.when(numbersService.findNumberCombination(numbers, target)).thenReturn(mockResult);
 
     // when:

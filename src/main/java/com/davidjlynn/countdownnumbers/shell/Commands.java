@@ -3,6 +3,7 @@ package com.davidjlynn.countdownnumbers.shell;
 import com.davidjlynn.countdownnumbers.service.NumbersService;
 import com.davidjlynn.countdownnumbers.service.model.SumSo;
 import java.util.List;
+import java.util.SequencedSet;
 import lombok.AllArgsConstructor;
 import org.springframework.shell.command.CommandRegistration.OptionArity;
 import org.springframework.shell.command.annotation.Command;
@@ -20,7 +21,7 @@ public class Commands {
   public String calculateNumbers(
       @Option(arity = OptionArity.EXACTLY_ONE) Integer target,
       @Option(arityMin = 1, arityMax = 6) List<Integer> numbers) {
-    List<SumSo> sums = numbersService.findNumberCombination(numbers, target);
+    SequencedSet<SumSo> sums = numbersService.findNumberCombination(numbers, target);
     StringBuilder stringBuilder = new StringBuilder();
     if (sums.isEmpty()) {
       stringBuilder.append("No matching results were found");

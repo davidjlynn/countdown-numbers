@@ -2,6 +2,7 @@ package com.davidjlynn.countdownnumbers.service;
 
 import com.davidjlynn.countdownnumbers.service.model.SumSo;
 import java.util.List;
+import java.util.SequencedSet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,7 @@ class NumbersServiceTest {
     List<Integer> input = List.of();
 
     // when:
-    List<SumSo> result = numbersService.calculateListOfResults(input);
+    SequencedSet<SumSo> result = numbersService.calculateListOfResults(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -29,7 +30,7 @@ class NumbersServiceTest {
     List<Integer> input = List.of(1);
 
     // when:
-    List<SumSo> result = numbersService.calculateListOfResults(input);
+    SequencedSet<SumSo> result = numbersService.calculateListOfResults(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -42,7 +43,7 @@ class NumbersServiceTest {
     List<Integer> input = List.of(1, 2);
 
     // when:
-    List<SumSo> result = numbersService.calculateListOfResults(input);
+    SequencedSet<SumSo> result = numbersService.calculateListOfResults(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -55,7 +56,7 @@ class NumbersServiceTest {
     List<Integer> input = List.of(1, 2, 3);
 
     // when:
-    List<SumSo> result = numbersService.calculateListOfResults(input);
+    SequencedSet<SumSo> result = numbersService.calculateListOfResults(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -68,7 +69,7 @@ class NumbersServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4);
 
     // when:
-    List<SumSo> result = numbersService.calculateListOfResults(input);
+    SequencedSet<SumSo> result = numbersService.calculateListOfResults(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -81,7 +82,7 @@ class NumbersServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
     // when:
-    List<SumSo> result = numbersService.calculateListOfResults(input);
+    SequencedSet<SumSo> result = numbersService.calculateListOfResults(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -95,7 +96,7 @@ class NumbersServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
     // when:
-    List<SumSo> result = numbersService.calculateListOfResults(input);
+    SequencedSet<SumSo> result = numbersService.calculateListOfResults(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -109,7 +110,8 @@ class NumbersServiceTest {
     Integer inputTargetNumber = 1;
 
     // when:
-    List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+    SequencedSet<SumSo> result =
+        numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
 
     // then:
     Assertions.assertNotNull(result);
@@ -123,7 +125,8 @@ class NumbersServiceTest {
     Integer inputTargetNumber = 1;
 
     // when:
-    List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+    SequencedSet<SumSo> result =
+        numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
 
     // then:
     Assertions.assertNotNull(result);
@@ -137,7 +140,8 @@ class NumbersServiceTest {
     Integer inputTargetNumber = 1;
 
     // when:
-    List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+    SequencedSet<SumSo> result =
+        numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
 
     // then:
     Assertions.assertNotNull(result);
@@ -151,7 +155,8 @@ class NumbersServiceTest {
     Integer inputTargetNumber = 1;
 
     // when:
-    List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+    SequencedSet<SumSo> result =
+        numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
 
     // then:
     Assertions.assertNotNull(result);
@@ -165,7 +170,8 @@ class NumbersServiceTest {
     Integer inputTargetNumber = 1;
 
     // when:
-    List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+    SequencedSet<SumSo> result =
+        numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
 
     // then:
     Assertions.assertNotNull(result);
@@ -180,7 +186,8 @@ class NumbersServiceTest {
     Integer inputTargetNumber = 1;
 
     // when:
-    List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+    SequencedSet<SumSo> result =
+        numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
 
     // then:
     Assertions.assertNotNull(result);
@@ -195,7 +202,8 @@ class NumbersServiceTest {
     Integer inputTargetNumber = 1;
 
     // when:
-    List<SumSo> result = numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
+    SequencedSet<SumSo> result =
+        numbersService.findNumberCombination(inputNumbers, inputTargetNumber);
 
     // then:
     Assertions.assertNotNull(result);
