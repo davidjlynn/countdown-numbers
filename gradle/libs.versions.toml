@@ -2,8 +2,8 @@
 springBoot = "3.4.5"
 springDependencyManagement = "1.1.7"
 spotless = "7.0.3"
-sonarqube = "5.1.0.4882"
-nebulaRelease = "19.0.10"
+sonarqube = "6.1.0.5360"
+nebulaRelease = "20.2.0"
 
 [plugins]
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot"}
