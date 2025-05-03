@@ -76,7 +76,7 @@ spotless {
   format 'misc', {
     target '.gitattributes', '.gitignore'
     trimTrailingWhitespace()
-    indentWithSpaces(2)
+    leadingTabsToSpaces(2)
     endWithNewline()
   }
   java {
