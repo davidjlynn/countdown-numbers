@@ -2,7 +2,7 @@ package com.davidjlynn.countdownnumbers.service;
 
 import com.davidjlynn.countdownnumbers.service.model.operation.OperationSo;
 import java.util.List;
-import java.util.Set;
+import java.util.SequencedSet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +14,7 @@ class SumGeneratorServiceTest {
     List<Integer> input = List.of();
 
     // when:
-    Set<OperationSo> result = SumGeneratorService.summifySingle(input);
+    SequencedSet<OperationSo> result = SumGeneratorService.summifySingle(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -27,7 +27,7 @@ class SumGeneratorServiceTest {
     List<Integer> input = List.of(1);
 
     // when:
-    Set<OperationSo> result = SumGeneratorService.summifySingle(input);
+    SequencedSet<OperationSo> result = SumGeneratorService.summifySingle(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -40,7 +40,7 @@ class SumGeneratorServiceTest {
     List<Integer> input = List.of(1, 2);
 
     // when:
-    Set<OperationSo> result = SumGeneratorService.summifySingle(input);
+    SequencedSet<OperationSo> result = SumGeneratorService.summifySingle(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -53,7 +53,7 @@ class SumGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3);
 
     // when:
-    Set<OperationSo> result = SumGeneratorService.summifySingle(input);
+    SequencedSet<OperationSo> result = SumGeneratorService.summifySingle(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -66,7 +66,7 @@ class SumGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4);
 
     // when:
-    Set<OperationSo> result = SumGeneratorService.summifySingle(input);
+    SequencedSet<OperationSo> result = SumGeneratorService.summifySingle(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -79,7 +79,7 @@ class SumGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4, 5);
 
     // when:
-    Set<OperationSo> result = SumGeneratorService.summifySingle(input);
+    SequencedSet<OperationSo> result = SumGeneratorService.summifySingle(input);
 
     // then:
     Assertions.assertNotNull(result);
@@ -92,7 +92,7 @@ class SumGeneratorServiceTest {
     List<Integer> input = List.of(1, 2, 3, 4, 5, 6);
 
     // when:
-    Set<OperationSo> result = SumGeneratorService.summifySingle(input);
+    SequencedSet<OperationSo> result = SumGeneratorService.summifySingle(input);
 
     // then:
     Assertions.assertNotNull(result);
