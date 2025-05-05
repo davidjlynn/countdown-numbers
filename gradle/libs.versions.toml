@@ -1,9 +1,10 @@
 [versions]
-springBoot = "3.4.5"
+springBoot = "3.4.4"
 springDependencyManagement = "1.1.7"
 spotless = "7.0.3"
 sonarqube = "6.1.0.5360"
 nebulaRelease = "20.2.0"
+benManesVersions = "0.52.0"
 
 [plugins]
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot"}
@@ -11,3 +12,4 @@ springDependencyManagement = { id = "io.spring.dependency-management", version.r
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless"}
 sonarqube = { id = "org.sonarqube", version.ref = "sonarqube"}
 nebulaRelease = { id = "nebula.release", version.ref = "nebulaRelease"}
+benManesVersions = { id = "com.github.ben-manes.versions", version.ref = "benManesVersions"}
