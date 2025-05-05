@@ -4,6 +4,7 @@ plugins {
   alias(libs.plugins.springDependencyManagement)
   jacoco
   alias(libs.plugins.sonarqube)
+  alias(libs.plugins.benManesVersions)
   alias(libs.plugins.spotless)
   alias(libs.plugins.nebulaRelease)
   `maven-publish`
