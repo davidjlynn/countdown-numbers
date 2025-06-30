@@ -3,7 +3,7 @@ springBoot = "3.5.3"
 springDependencyManagement = "1.1.7"
 spotless = "7.0.4"
 sonarqube = "6.2.0.5505"
-nebulaRelease = "20.2.0"
+nebulaRelease = "21.0.0"
 benManesVersions = "0.52.0"
 
 [plugins]
