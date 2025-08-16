@@ -3,13 +3,16 @@ name: CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
+  pull_request_target:
     branches: [ "main" ]
+    types:
+      - labeled
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'run checks')
     permissions:
       contents: read
 
