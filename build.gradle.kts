@@ -67,7 +67,7 @@ spotless {
     googleJavaFormat()
     formatAnnotations()
   }
-  kotlinGradle { ktfmt().googleStyle() }
+//  kotlinGradle { ktfmt().googleStyle() }
 }
 
 tasks.release { dependsOn(tasks.publish) }
