@@ -18,7 +18,7 @@ configurations { compileOnly { extendsFrom(configurations.annotationProcessor.ge
 
 repositories { mavenCentral() }
 
-extra["springShellVersion"] = "3.4.1"
+extra["springShellVersion"] = "4.0.3"
 
 dependencies {
   implementation("org.springframework.shell:spring-shell-starter")
