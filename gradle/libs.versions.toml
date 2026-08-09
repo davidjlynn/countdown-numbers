@@ -4,7 +4,7 @@ springDependencyManagement = "1.1.7"
 spotless = "8.0.0"
 sonarqube = "6.3.1.5724"
 nebulaRelease = "21.0.0"
-benManesVersions = "0.53.0"
+benManesVersions = "0.61.0"
 
 [plugins]
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot"}
