@@ -1,7 +1,7 @@
 [versions]
 springBoot = "3.5.6"
 springDependencyManagement = "1.1.7"
-spotless = "8.0.0"
+spotless = "8.10.2"
 sonarqube = "6.3.1.5724"
 nebulaRelease = "21.0.0"
 benManesVersions = "0.53.0"
